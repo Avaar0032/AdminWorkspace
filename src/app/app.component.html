@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button type="button" mat-button (click)="sidenav.toggle()">
+      Open sidenav
+    </button>
+    <span>AdminWorkspace</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened="true" #sidenav class="sidenav">
+    Jolly good!
+  </mat-sidenav>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>
+

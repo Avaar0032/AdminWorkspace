@@ -1,0 +1,10 @@
+<div *ngIf="product; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+  <p>id: {{ product.id }}</p>
+  <p>name: {{ product.name }}</p>
+  <p>date: {{ product.create_date }}</p>
+</ng-template>
+<ng-template #elseBlock>
+  <p>Loading</p>
+</ng-template>
+<button (click)="goBack()" >Back</button>

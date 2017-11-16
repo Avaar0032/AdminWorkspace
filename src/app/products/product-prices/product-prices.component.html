@@ -1,0 +1,14 @@
+<div *ngIf="prices; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+  {{prices[0].id}}
+  <div *ngFor="let price of prices" >
+    <p>id: {{ price.id }}</p>
+    <p>name: {{ price.value }}</p>
+    <p>date: {{ price.add_date }}</p>
+  </div>
+</ng-template>
+<ng-template #elseBlock>
+  <p>Loading</p>
+</ng-template>
+<button (click)="goBack()" >Back</button>
+
